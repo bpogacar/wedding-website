@@ -5,12 +5,12 @@
 export const wedding = {
   couple: {
     partner1: {
-      name: 'Jane',        // First name
-      fullName: 'Jane Smith',
+      name: 'Kristy',        // First name
+      fullName: 'Kristy Lok',
     },
     partner2: {
-      name: 'John',
-      fullName: 'John Doe',
+      name: 'Benjamin',
+      fullName: 'Benjamin Pogacar',
     },
     // Path to couple photo in /public/images/
     heroPhoto: '/images/couple-hero.jpg',
@@ -18,17 +18,17 @@ export const wedding = {
   },
 
   event: {
-    date: 'October 18, 2025',          // Display date
-    dateISO: '2025-10-18',             // Machine-readable date
-    time: '4:00 PM',
+    date: 'June 26, 2028',          // Display date
+    dateISO: '2028-06-26',             // Machine-readable date
+    time: '1:00 PM',
     timezone: 'EST',
     venue: {
-      name: 'The Grand Manor',
-      address: '123 Elm Street',
-      city: 'Hartford',
-      state: 'CT',
-      zip: '06101',
-      googleMapsUrl: 'https://maps.google.com/?q=The+Grand+Manor+Hartford+CT',
+      name: 'Atlantic Resort at Wyndham Newport Hotel',
+      address: '240 Aquidneck Ave',
+      city: 'Middletown',
+      state: 'RI',
+      zip: '02842',
+      googleMapsUrl: 'https://www.google.com/maps/place/Wyndham+Newport+Hotel/@41.4970755,-71.2844049,817m/data=!3m2!1e3!4b1!4m9!3m8!1s0x89e5a8cc36051107:0x6679ec65fbb9707b!5m2!4m1!1i2!8m2!3d41.4970755!4d-71.2844049!16s%2Fg%2F11c6qr16b7?entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D',
     },
   },
 
