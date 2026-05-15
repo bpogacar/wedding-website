@@ -71,28 +71,28 @@ export const wedding = {
   weddingParty: [
     // Repeat this block for each member
     {
-      name: 'Emily Carter',
+      name: 'Kara Mia Moran',
       role: 'Maid of Honor',
       photo: '/images/party/emily.jpg',
-      relation: "Jane's sister",
+      relation: "Kristy's childhood friend",
     },
     {
-      name: 'Sarah Lee',
+      name: 'Jillian Pogacar',
       role: 'Bridesmaid',
       photo: '/images/party/sarah.jpg',
-      relation: "Jane's college roommate",
+      relation: "Benjamin's sister",
     },
     {
-      name: 'Michael Doe',
+      name: 'Jacob Pogacar',
       role: 'Best Man',
       photo: '/images/party/michael.jpg',
-      relation: "John's brother",
+      relation: "Ben's brother",
     },
     {
-      name: 'Chris Park',
+      name: 'William Allen',
       role: 'Groomsman',
       photo: '/images/party/chris.jpg',
-      relation: "John's childhood friend",
+      relation: "Ben's cousin",
     },
   ],
 
