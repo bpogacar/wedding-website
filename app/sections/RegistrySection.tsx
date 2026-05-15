@@ -49,23 +49,19 @@ export default function RegistrySection() {
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="card-hover inline-flex items-center gap-3 px-8 py-5 transition-all duration-300"
-              style={{
-                backgroundColor: 'rgba(255,255,255,0.06)',
-                border: '1px solid rgba(196,160,68,0.3)',
-                borderRadius: '2px',
-                color: 'var(--color-ivory)',
-                textDecoration: 'none',
-                minWidth: 200,
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.borderColor = 'var(--color-gold)';
-                (e.currentTarget as HTMLElement).style.backgroundColor = 'rgba(196,160,68,0.1)';
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.borderColor = 'rgba(196,160,68,0.3)';
-                (e.currentTarget as HTMLElement).style.backgroundColor = 'rgba(255,255,255,0.06)';
-              }}
+              className="
+                card-hover
+                inline-flex items-center gap-3 px-8 py-5
+                transition-all duration-300
+                min-w-[200px]
+                rounded-[2px]
+                no-underline
+                text-[var(--color-ivory)]
+                border border-[rgba(196,160,68,0.3)]
+                bg-[rgba(255,255,255,0.06)]
+                hover:border-[var(--color-gold)]
+                hover:bg-[rgba(196,160,68,0.1)]
+              "
             >
               <span
                 style={{
