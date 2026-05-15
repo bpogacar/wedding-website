@@ -73,19 +73,18 @@ export default function HeroSection() {
         {/* CTA */}
         <a
           href="#details"
-          className="inline-block mt-10 px-10 py-3 text-xs tracking-[0.2em] uppercase border transition-all duration-300"
+          className="
+            inline-block mt-10 px-10 py-3
+            text-xs uppercase tracking-[0.2em]
+            border
+            transition-all duration-300
+            text-white
+            border-[rgba(255,255,255,0.5)]
+            hover:bg-[var(--color-gold)]
+            hover:border-[var(--color-gold)]
+          "
           style={{
             fontFamily: 'var(--font-body)',
-            borderColor: 'rgba(255,255,255,0.5)',
-            color: '#fff',
-          }}
-          onMouseEnter={(e) => {
-            (e.target as HTMLElement).style.backgroundColor = 'var(--color-gold)';
-            (e.target as HTMLElement).style.borderColor = 'var(--color-gold)';
-          }}
-          onMouseLeave={(e) => {
-            (e.target as HTMLElement).style.backgroundColor = 'transparent';
-            (e.target as HTMLElement).style.borderColor = 'rgba(255,255,255,0.5)';
           }}
         >
           View Details
