@@ -3,6 +3,8 @@ import { NextResponse } from 'next/server';
 import { normalizeSearchQuery, searchHouseholds } from '@/app/lib/rsvp';
 
 export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
