@@ -5,13 +5,14 @@ import Link from 'next/link';
 import { wedding } from '../lib/wedding-data';
 
 const navLinks = [
-  { label: 'Our Story', href: '#story' },
-  { label: 'Details', href: '#details' },
-  { label: 'Itinerary', href: '#itinerary' },
-  { label: 'Travel', href: '#travel' },
-  { label: 'Wedding Party', href: '#party' },
-  { label: 'Registry', href: '#registry' },
-  { label: 'Explore', href: '#attractions' },
+  { label: 'Our Story', href: '/#story' },
+  { label: 'Details', href: '/#details' },
+  { label: 'Itinerary', href: '/#itinerary' },
+  { label: 'Travel', href: '/#travel' },
+  { label: 'Wedding Party', href: '/#party' },
+  { label: 'Registry', href: '/#registry' },
+  { label: 'Explore', href: '/#attractions' },
+  { label: 'RSVP', href: '/rsvp' },
 ];
 
 export default function Nav() {
@@ -43,13 +44,13 @@ export default function Nav() {
         <ul className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a
+              <Link
                 href={link.href}
                 className="nav-link text-sm tracking-widest uppercase"
                 style={{ fontFamily: 'var(--font-body)', fontWeight: 400, fontSize: '0.72rem', letterSpacing: '0.12em' }}
               >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -75,14 +76,14 @@ export default function Nav() {
           <ul className="flex flex-col gap-5">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a
+                <Link
                   href={link.href}
                   className="text-sm tracking-widest uppercase"
                   style={{ fontSize: '0.75rem', letterSpacing: '0.12em' }}
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
