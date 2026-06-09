@@ -163,7 +163,7 @@ export const wedding = {
       address: '240 Aquidneck Ave, Middletown, RI 02842',
       phone: '(401) 236-2020',
       url: 'https://www.wyndhamhotels.com/wyndham/middletown-rhode-island/wyndham-newport-hotel/overview?CID=LC:46q62bu8edfbx3y:45280&iata=00093796',
-      notes: 'Use code LOK-POGACAR for a room block discount (available until August 4th)',
+      notes: 'Use code LOK-POGACAR for a room block discount (available until July 21st)',
       priceRange: '$300-$600/night',
     },
     {
