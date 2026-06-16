@@ -163,7 +163,7 @@ export const wedding = {
       address: '240 Aquidneck Ave, Middletown, RI 02842',
       phone: '(401) 236-2020',
       url: 'https://www.wyndhamhotels.com/wyndham/middletown-rhode-island/wyndham-newport-hotel/overview?CID=LC:46q62bu8edfbx3y:45280&iata=00093796',
-      notes: 'Use code LOK-POGACAR for a room block discount (available until July 21st)',
+      notes: 'Call the hotel @ (401) 236-2020 and mention the LOK-POGACAR wedding for a room block discount (available until July 20th, 2027)',
       priceRange: '$300-$600/night',
     },
     {
@@ -260,8 +260,8 @@ export const wedding = {
 
   rsvp: {
     // Set to true to enable RSVP form (requires backend/API setup)
-    enabled: false,
-    deadline: 'September 1, 2025',
+    enabled: true,
+    deadline: 'August 1, 2027',
     // If using a third-party RSVP service like Zola or The Knot, put the URL here
     externalUrl: '',
   },
