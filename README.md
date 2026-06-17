@@ -107,6 +107,84 @@ In Vercel Dashboard → Project → **Settings → Domains**, add your custom do
 
 ---
 
+## Database Setup
+
+The RSVP backend uses **Neon Postgres** for persistent guest and RSVP data. This project does not need a separate custom backend server: the Next.js API routes in `app/api/rsvp/` are the backend layer, and they connect to Neon through `app/lib/db.ts`.
+
+Request flow:
+
+```text
+/rsvp page -> app/api/rsvp/* -> app/lib/rsvp.ts -> app/lib/db.ts -> Neon Postgres
+```
+
+### 1. Create a Neon project
+
+1. Create a Neon account at [neon.tech](https://neon.tech).
+2. Create a new project, for example `wedding-website`.
+3. Choose a region close to your guests or Vercel deployment region. For a mostly US audience, a US region is usually a good default.
+4. Keep the default `main` branch for production.
+5. Copy the pooled or standard Postgres connection string from the Neon dashboard.
+
+The connection string should look like:
+
+```env
+DATABASE_URL="postgresql://USER:PASSWORD@HOSTNAME/DATABASE?sslmode=require"
+```
+
+### 2. Configure local development
+
+Create a `.env.local` file in the project root:
+
+```env
+DATABASE_URL="postgresql://USER:PASSWORD@HOSTNAME/DATABASE?sslmode=require"
+```
+
+Never commit `.env.local` or paste the production connection string into client-side files. RSVP guest data must stay server-only.
+
+### 3. Connect Neon to Vercel
+
+For deployment, configure `DATABASE_URL` in Vercel:
+
+1. Open the Vercel project dashboard.
+2. Go to **Settings -> Environment Variables**.
+3. Add `DATABASE_URL`.
+4. Enable it for **Production**, **Preview**, and **Development** as appropriate.
+5. Redeploy after adding or changing the variable.
+
+You can also use the official Neon/Vercel integration:
+
+- Use the **Vercel-managed Neon integration** if you want Neon billing and setup managed through Vercel.
+- Use the **Neon-managed Vercel integration** if you already have a Neon account or want to manage billing directly in Neon.
+- Prefer an integration if you want automatic database branches for Vercel preview deployments.
+- Use manual environment variables if you want the simplest setup and do not need preview database branching.
+
+### 4. Apply database migrations
+
+Run the SQL files in `db/migrations/` against the Neon database before using the RSVP route. You can apply them with:
+
+- the Neon SQL Editor,
+- `psql`,
+- the Neon CLI,
+- or a future npm migration script.
+
+Keep schema changes in `db/migrations/` so production, preview, and local databases stay understandable and repeatable.
+
+### 5. Seed RSVP households and guests
+
+Guest and household seed files belong in `db/seeds/`. Apply seeds only from a trusted server-side tool such as the Neon SQL Editor, `psql`, or a private script.
+
+Do not place the full guest list in `app/lib/wedding-data.ts` or any client-bundled file. The browser should only search, load, and submit RSVP data through the server-side API routes.
+
+### 6. Recommended environment strategy
+
+- **Production:** Neon `main` branch connected to Vercel Production.
+- **Preview:** Neon preview branches connected to Vercel Preview deployments if using the integration.
+- **Local development:** either a separate Neon development branch or a local `.env.local` pointing at a non-production Neon branch.
+
+Before launch, test the full RSVP flow on a non-production branch, then confirm the production `DATABASE_URL` points at the intended Neon production database.
+
+---
+
 ## 📂 Project Structure
 
 ```

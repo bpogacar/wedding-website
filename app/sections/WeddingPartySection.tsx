@@ -54,7 +54,7 @@ export default function WeddingPartySection() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="section-subtitle">The Dream Team</span>
+          <span className="section-subtitle">Kristy and Ben's</span>
           <h2 className="section-title">Wedding Party</h2>
           <div className="section-divider" />
         </div>

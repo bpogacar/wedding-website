@@ -36,6 +36,7 @@ module.exports = {
           500: '#c4a044',
           600: '#a07830',
         },
+        charcoal: '#2d2d2d',
       },
       animation: {
         'fade-up': 'fadeUp 0.8s ease forwards',
