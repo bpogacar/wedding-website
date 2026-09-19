@@ -276,7 +276,7 @@ export default function RsvpForm() {
                               : 'border-sage-200 bg-ivory-50 text-charcoal hover:border-sage-400'
                           }`}
                         >
-                          Declines
+                          Decline
                         </button>
                       </div>
                     </div>
