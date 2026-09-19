@@ -1,5 +1,11 @@
 import { wedding } from '../lib/wedding-data';
+import Image, { type StaticImageData } from 'next/image';
 import { Gift, ExternalLink } from 'lucide-react';
+import honeymoonLogo from '../images/honeymoon.png';
+
+const registryLogos: Record<string, StaticImageData> = {
+  'honeymoon.png': honeymoonLogo,
+};
 
 export default function RegistrySection() {
   const { registry } = wedding;
@@ -43,38 +49,49 @@ export default function RegistrySection() {
 
         {/* Registry links */}
         <div className="flex flex-wrap justify-center gap-6">
-          {registry.map((item, i) => (
-            <a
-              key={i}
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-                card-hover
-                inline-flex items-center gap-3 px-8 py-5
-                transition-all duration-300
-                min-w-[200px]
-                rounded-[2px]
-                no-underline
-                text-[var(--color-ivory)]
-                border border-[rgba(196,160,68,0.3)]
-                bg-[rgba(255,255,255,0.06)]
-                hover:border-[var(--color-gold)]
-                hover:bg-[rgba(196,160,68,0.1)]
-              "
-            >
-              <span
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontSize: '1.2rem',
-                  fontWeight: 400,
-                }}
+          {registry.map((item, i) => {
+            const logo = item.logo ? registryLogos[item.logo] : undefined;
+
+            return (
+              <a
+                key={i}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  card-hover
+                  inline-flex items-center gap-3 px-8 py-5
+                  transition-all duration-300
+                  min-w-[200px]
+                  rounded-[2px]
+                  no-underline
+                  text-[var(--color-ivory)]
+                  border border-[rgba(196,160,68,0.3)]
+                  bg-[rgba(255,255,255,0.06)]
+                  hover:border-[var(--color-gold)]
+                  hover:bg-[rgba(196,160,68,0.1)]
+                "
               >
-                {item.store}
-              </span>
-              <ExternalLink size={14} style={{ opacity: 0.5 }} />
-            </a>
-          ))}
+                {logo && (
+                  <Image
+                    src={logo}
+                    alt=""
+                    className="h-10 w-10 object-contain"
+                  />
+                )}
+                <span
+                  style={{
+                    fontFamily: 'var(--font-display)',
+                    fontSize: '1.2rem',
+                    fontWeight: 400,
+                  }}
+                >
+                  {item.store}
+                </span>
+                <ExternalLink size={14} style={{ opacity: 0.5 }} />
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -52,20 +52,20 @@ export const wedding = {
 
   registry: [
     {
-      store: 'Crate & Barrel',
-      url: 'https://www.crateandbarrel.com/gift-registry/',
-      logo: '/images/registry-cb.png',  // optional
+      store: 'Honeymoon Fund',
+      url: 'https://registry.theknot.com/benjamin-pogacar-kristy-lok-september-2027-ct/80389476?_gl=1*879dsj*_gcl_aw*R0NMLjE3ODk4NDc2MjEuQ2owS0NRanc1YmpWQmhDaUFSSXNBSnpNVm5UaXdXWXhzZFJCY1lieVk2Njg1TDY3UmdHWFN6cUlxdG9uUGk2aVR3QnUtRW9GTk5RUlU5TWFBZ3lRRUFMd193Y0I.*_gcl_au*MTE0MzU4MTgxNS4xNzg5ODQ3NTY5LjIxMzc4Nzk5NzkuMTc4OTg0NzYwNS4xNzg5ODQ4MjU1LjEzMTYzMTk3MTQuMTc4OTg0NzU3MC4xNzg5ODQ4MjU1*_ga*NDE5MDQ1NTk2LjE3NzkxNTA4Njg.*_ga_6XZLY5HEQX*czE3ODk4NDc1NjgkbzIkZzEkdDE3ODk4NDgyNTckajQ2JGwwJGgw',
+      logo: 'honeymoon.png',  // optional
     },
-    {
-      store: 'Williams Sonoma',
-      url: 'https://www.williams-sonoma.com/registry/',
-      logo: '/images/registry-ws.png',  // optional
-    },
-    {
-      store: 'Amazon',
-      url: 'https://www.amazon.com/wedding/',
-      logo: '/images/registry-amazon.png', // optional
-    },
+    // {
+    //   store: 'Williams Sonoma',
+    //   url: 'https://www.williams-sonoma.com/registry/',
+    //   logo: '/images/registry-ws.png',  // optional
+    // },
+    // {
+    //   store: 'Amazon',
+    //   url: 'https://www.amazon.com/wedding/',
+    //   logo: '/images/registry-amazon.png', // optional
+    // },
   ],
 
   weddingParty: [

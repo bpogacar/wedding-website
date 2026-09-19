@@ -15,7 +15,7 @@ export default function Home() {
       <DetailsSection />
       <ItinerarySection />
       <TravelSection />
-      <WeddingPartySection />
+      {/* <WeddingPartySection /> */}
       <RegistrySection />
       <AttractionsSection />
     </>

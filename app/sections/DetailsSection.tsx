@@ -1,5 +1,8 @@
 import { wedding } from '../lib/wedding-data';
+import Image from 'next/image';
 import { MapPin, Clock, CalendarDays, Shirt } from 'lucide-react';
+import dressIcon from '../images/dress.png';
+import suitIcon from '../images/tie.png';
 
 export default function DetailsSection() {
   const { date, time, timezone, venue } = wedding.event;
@@ -73,7 +76,20 @@ export default function DetailsSection() {
           className="p-10 text-center rounded-sm"
           style={{ background: 'linear-gradient(135deg, var(--color-blush) 0%, var(--color-ivory-dark) 100%)' }}
         >
-          <Shirt size={28} style={{ color: 'var(--color-charcoal)', margin: '0 auto 1rem' }} />
+          <div className="mb-4 flex items-center justify-center gap-6">
+            <Image
+              src={dressIcon}
+              alt="Dress icon"
+              className="h-auto w-20"
+              priority={false}
+            />
+            <Image
+              src={suitIcon}
+              alt="Suit icon"
+              className="h-auto w-20"
+              priority={false}
+            />
+          </div>
           <h3
             style={{
               fontFamily: 'var(--font-display)',
