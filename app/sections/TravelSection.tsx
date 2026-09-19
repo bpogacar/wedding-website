@@ -81,6 +81,16 @@ export default function TravelSection() {
                 >
                   Book Now <ExternalLink size={10} />
                 </a>
+                {hotel.name.toLowerCase().includes('wyndham') && (
+                  <a
+                    href={"https://www.wyndhamhotels.com/wyndham/middletown-rhode-island/wyndham-newport-hotel/rooms-rates?brand_id=HR&checkInDate=9/3/2027&checkOutDate=9/5/2027&useWRPoints=false&children=0&groupCode=090327LOK&adults=1&rooms=1&referringBrand=ALL&loc=ChIJ2TYlYDqp5YkRFO67ZqjYjis&sessionId=1788795826"}
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs tracking-widest uppercase"
+                    style={{ color: 'var(--color-gold)', borderBottom: '1px solid var(--color-gold)', paddingBottom: '1px' }}
+                  >
+                    LIMITED AVAILABILITY ROOM BLOCK <ExternalLink size={10} />
+                  </a>
+                )}
               </div>
             ))}
           </div>
